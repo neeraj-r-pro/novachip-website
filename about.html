@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <title>About - NOVACHIP</title>
+  <title>About-NOVACHIP</title>
   <link rel="stylesheet" href="style.css">
   <style>
     .container {
@@ -10,14 +11,22 @@
     }
 
     .about-section {
-      background: linear-gradient(135deg, #3a0ca3, #5f4bff, #007BFF);
+    background: linear-gradient(135deg, #3a0ca3, #5f4bff, #007BFF);
       color: white;
       border: 5px solid black;
       border-radius: 15px;
       padding: 15px;
       margin-bottom: 20px;
-    }
+       }
+     .about-section {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.about-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+  
     .about-list {
       font-size: 18px;
     }
@@ -39,6 +48,36 @@
       margin-right: 15px;
       text-decoration: none;
     }
+     nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #003049;
+    padding: 10px;
+  }
+
+  nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+  }
+
+  nav a:hover {
+    background-color: #555;
+  }
+
+  @media (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .container {
+  padding: 20px;
+}
+
   </style>
 </head>
 <body>
@@ -56,27 +95,27 @@
 
   <div class="container">
     <div class="about-section">
-      <h3>Our Mission</h3>
+      <h3>💡Our Mission</h3>
       <p>To provide reliable, efficient, and affordable office and home automation solutions that empower businesses and individuals to thrive in a connected world.</p>
     </div>
 
     <div class="about-section">
-      <h3>Our Vision</h3>
+      <h3>🚀Our Vision</h3>
       <p>To become a leading service provider in the automation industry by delivering innovative solutions and unmatched customer support.</p>
     </div>
 
     <div class="about-section">
-      <h3>Our Journey</h3>
+      <h3>📘Our Journey</h3>
       <p>Started in 2002 with a passion for simplifying office processes, Novachip has grown from a small service center to a trusted automation solutions provider serving over 1500 satisfied clients.</p>
     </div>
 
     <div class="about-section">
-      <h3>Our Team</h3>
+      <h3>👥Our Team</h3>
       <p>Our team consists of experienced professionals with deep knowledge in office and home equipment, automation systems, and customer service. Their dedication ensures fast and efficient support to all our clients.</p>
     </div>
 
     <div class="about-section">
-      <h3>Our Values</h3>
+      <h3>🎯Our Values</h3>
       <ul class="about-list">
         <li>Customer-Centric Approach</li>
         <li>Integrity and Transparency</li>
@@ -87,15 +126,32 @@
     </div>
 
     <h3>Brands We Work With:</h3>
-    <div class="brand-logos">
-      <img src="images/hp.png" alt="HP">
-      <img src="images/godrej.png" alt="Godrej">
-      <img src="images/panasonic.jpg" alt="Panasonic">
-      <img src="images/epson.jpg" alt="epson">
-      <img src="images/essl.png" alt="essl">
-      <img src="images/hikvision.png" alt="hikvision">
-      <img src="images/Sharp.png" alt="sharp">
-    </div>
+    <div class="brand-marquee">
+  <div class="brand-track">
+    <img src="images/hp.png" alt="HP">
+    <img src="images/godrej.png" alt="Godrej">
+    <img src="images/panasonic.jpg" alt="Panasonic">
+    <img src="images/epson.jpg" alt="epson">
+    <img src="images/essl.png" alt="essl">
+    <img src="images/hikvision.png" alt="hikvision">
+    <img src="images/Sharp.png" alt="sharp">
+    <img src="images/matrix.jpg" alt="matrix">
+    <img src="images/foxtech.jpg" alt="foxtech">
+    <img src="images/syntel.png" alt="syntel">
+    <!-- Repeat once more for smooth loop -->
+    <img src="images/hp.png" alt="HP">
+    <img src="images/godrej.png" alt="Godrej">
+    <img src="images/panasonic.jpg" alt="Panasonic">
+    <img src="images/epson.jpg" alt="epson">
+    <img src="images/essl.png" alt="essl">
+    <img src="images/hikvision.png" alt="hikvision">
+    <img src="images/Sharp.png" alt="sharp">
+    <img src="images/matrix.jpg" alt="matrix">
+    <img src="images/foxtech.jpg" alt="foxtech">
+    <img src="images/syntel.png" alt="syntel">
+  </div>
+</div>
+
   </div>
 
   <footer>

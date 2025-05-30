@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background: #c90707;
+     background: #03045e;
     color: white;
     padding: 20px;
     text-align: center;
@@ -36,7 +36,7 @@ nav a:hover {
 }
 
 footer {
-    background: #c90707;
+   background: #03045e;
     color: white;
     text-align: center;
     padding: 20px;

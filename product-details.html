@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Product Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background-color: #f5f5f5;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .product-image {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 0 auto 20px;
+    }
+
+    .product-details-box {
+      background-color: #c90707; /* Red */
+      color: white;
+      border: 5px solid black;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: left;
+    }
+
+    .product-details-box a {
+      color: black;
+      text-decoration: underline;
+    }
+
+    .description {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .contact {
+      font-size: 16px;
+    }
+
+    .back-button {
+      text-align: left;
+      margin: 10px 20px;
+    }
+
+    .back-button a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      background-color: #d32f2f;
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="back-button">
+    <a href="products.html">← Back</a>
+  </div>
+
+  <h1 id="productName">Loading...</h1>
+  <img id="productImage" class="product-image" src="" alt="">
+
+  <!-- Red Box Wrapper -->
+  <div class="product-details-box">
+    <p class="description" id="productDescription"></p>
+    <div class="contact" id="productContact"></div>
+  </div>
+
+  <script>
+    const products = [/* same product array as before */{
+    name: "BIOMETRIC ATTENDANCE SYSTEM",
+    image: "images/biometric.png",
+    description: "Biometric Attendance System uses fingerprint, face, or iris recognition to accurately track employee attendance and prevent time theft. It ensures secure, fast, and tamper-proof attendance logging, ideal for offices, schools, and factories.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "PHOTOSTAT MACHINES",
+    image: "images/printer.jpg",
+    description: "Print/scan/copy/network/duplex all in one system.Photostat Machine is a multifunction device that allows high-speed photocopying, printing, scanning, and sometimes faxing. It’s essential for offices, schools, and businesses that require frequent document handling with efficiency and clarity.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "PRINTERS",
+    image: "images/printers.jpg",
+    description: "Print/scan/copy machines for office and home use.Printers are devices that produce hard copies of digital documents and images. Ideal for home and office use, they often come with additional features like scanning, copying, and wireless connectivity for efficient and convenient printing.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "SECURITY ALARM SYSTEM",
+    image: "images/alarm.jpg",
+    description: "Security alarm systems are electronic devices designed to detect unauthorized entry or suspicious activity. Equipped with motion sensors, door/window contacts, and sirens, they provide real-time alerts and help protect homes, offices, and commercial spaces from intrusions and emergencies.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "COMPUTERS AND SCANNERS",
+    image: "images/computer-scanner.jpg",
+    description: "Computers and scanners are essential office tools that enable digital processing and documentation. Computers handle a wide range of tasks from data entry to multimedia editing, while scanners convert physical documents into digital formats for easy storage, sharing, and editing. Together, they enhance productivity and streamline office workflows.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "BILLING MACHINE/CASH REGISTER",
+    image: "images/billing-machine.jpg",
+    description: "A billing machine or cash register is a vital point-of-sale device used to generate invoices, manage transactions, and store payment records. It helps streamline the checkout process, ensures accurate billing, and often includes features like tax calculation, inventory tracking, and receipt printing, making it ideal for retail and service-based businesses.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "INTERACTIVE BOARDS",
+    image: "images/raptor.png",
+    description: "Interactive boards are advanced digital display tools that allow users to write, draw, and interact with content directly on the screen using a pen, finger, or stylus. Ideal for classrooms, meetings, and presentations, they enhance engagement, collaboration, and real-time information sharing by combining traditional whiteboard functionality with smart technology.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "INVERTERS AND BATTERIES",
+    image: "images/inverter.jpg",
+    description: "Long-lasting power with heavy-duty tubular batteries.Inverters and batteries provide reliable backup power during electricity outages. Inverters convert stored battery energy into usable AC power for home and office appliances, while tubular or lithium batteries ensure long-lasting performance, fast charging, and high energy efficiency. Ideal for uninterrupted workflow and essential systems.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "UPS",
+    image: "images/ups.jpg",
+    description: "Uninterrupted power supply for critical systems.A UPS provides immediate backup power to devices during power outages or voltage fluctuations. It protects computers, servers, and sensitive equipment from data loss and hardware damage by ensuring continuous power and safe shutdown. Essential for offices, IT infrastructure, and critical systems.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "CASH COUNTING MACHINE",
+    image: "images/cash.jpg",
+    description: "Count and detect fake notes easily.A cash counting machine quickly and accurately counts large volumes of currency notes. It reduces human error, saves time, and increases efficiency in businesses. Many models also feature counterfeit note detection using UV, MG, and IR technologies for added security. Ideal for banks, retail stores, and financial institutions.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "QUEUE MANAGING SYSTEM",
+    image: "images/queue.jpg",
+    description: "To manage long queues efficiently.A queue managing system streamlines customer flow by issuing tokens and directing people to available counters. It helps reduce waiting time, organizes crowds efficiently, and improves service quality in banks, hospitals, government offices, and other public-facing institutions. Digital displays and audio announcements enhance the user experience.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "TOKEN DISPENSER",
+    image: "images/token.jpg",
+    description: "Automated token system for organized queues.A token dispenser is an automated device that issues numbered tokens to visitors or customers, helping manage service queues efficiently. It improves orderliness and customer experience in places like hospitals, banks, and service centers by assigning a clear position in line and integrating with queue display systems.",
+     phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "EPABX",
+    image: "images/epbx.jpg",
+    description: "Private telephone system for internal/external call management.EPABX is a private telephone network used within an organization to manage internal and external calls. It enables features like call forwarding, conferencing, voicemail, and intercom without needing separate lines for each user, making communication efficient and cost-effective in offices, hotels, schools, and large institutions.",
+   phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "IP PBX",
+    image: "images/ippbx.png",
+    description: "Internet-based telephony system with advanced call features.IP PBX is an advanced telephony system that uses internet protocol (VoIP) to manage incoming and outgoing calls. It allows voice, video, and messaging communication over a data network and offers features like call routing, voicemail to email, conferencing, and remote extension connectivity—ideal for modern, scalable business communication.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "AUTOMATIC PERFUME DISPENSER",
+    image: "images/perfume.jpg",
+    description: "Dispenses fragrance automatically to maintain ambiance.An automatic perfume dispenser is a wall-mounted or freestanding device that periodically sprays fragrance into the air to maintain a pleasant ambiance. Ideal for offices, restrooms, hotels, and public spaces, it operates on a timer or motion sensor and helps ensure a fresh-smelling environment with minimal effort.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "AUTOMATIC BELL SYSTEM",
+    image: "images/bell.jpeg",
+    description: "Programmable bell ringing device for schools, factories, etc.An automatic bell system is a programmable device designed to ring bells at scheduled times without manual intervention. Commonly used in schools, factories, and institutions, it helps manage time efficiently by signaling the start and end of periods, shifts, or breaks with precision and consistency.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "CCTV",
+    image: "images/cctv.jpg",
+    description: "Video surveillance system for safety and monitoring.CCTV systems provide real-time video surveillance for monitoring and securing homes, offices, and public spaces. These systems deter theft, enhance safety, and allow remote viewing of footage, making them essential for both security and evidence collection.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "GSM BASED SWITCH ON/OFF SYSTEMS",
+    image: "images/switch.jpg",
+    description: "Remote device control using GSM.A GSM-based switch on/off system allows users to remotely control electrical devices using mobile phones via SMS or calls. It's ideal for managing appliances, irrigation systems, or machinery from anywhere, offering convenience, energy efficiency, and enhanced control over operations.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "TEMPERATURE AND HUMIDITY SENSORS",
+    image: "images/temperature.jpg",
+    description: "Real-time climate monitoring devices.Temperature and humidity sensors monitor environmental conditions in real-time, providing accurate data for climate control systems. Commonly used in offices, warehouses, labs, and greenhouses, these sensors help maintain optimal conditions for comfort, safety, and equipment longevity.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "DOOR FRAME METAL DETECTORS",
+    image: "images/door.jpg",
+    description: "Walk-through metal detection security device.A door frame metal detector is a walk-through security device designed to detect concealed metallic objects on a person as they pass through. Commonly used at airports, schools, government buildings, and public venues, it enhances security by providing efficient and non-invasive screening.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "HAND HELD METAL DETECTORS",
+    image: "images/hand.jpg",
+    description: "Portable metal detection for security screening.A hand held metal detector is a portable security tool used to detect metal objects on a person or in bags. Often used by security personnel at checkpoints, it provides precise, close-range detection of concealed weapons or metallic items, ensuring safety in public and private spaces.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "TEA AND COFFEE VENDING MACHINE",
+    image: "images/tea.jpg",
+    description: "Automated beverage dispenser for hot drinks.A tea and coffee vending machine is an automated beverage dispenser that quickly serves hot drinks like tea, coffee, or soup. Ideal for offices, schools, and public areas, these machines offer convenience, consistency, and hygiene with minimal effort and no need for manual preparation.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "LCD PROJECTORS",
+    image: "images/lcd.png",
+    description: "Project images/videos in classrooms/offices.LCD (Liquid Crystal Display) projectors use advanced light projection technology to display bright, clear images and videos. Perfect for classrooms, offices, and presentations, they deliver high-resolution visuals with vivid color reproduction, ensuring engaging and effective communication.",
+     phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "LED DISPLAY",
+    image: "images/led.jpg",
+    description: "Bright LED panels for digital signage and ads.LED displays are high-brightness digital screens used for dynamic advertising, information display, and signage. They offer excellent visibility in both indoor and outdoor environments, with vibrant colors, energy efficiency, and long-lasting performance ideal for continuous content broadcasting.",
+     phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "VIDEO DOOR PHONES",
+    image: "images/video.jpg",
+    description: "See and talk to visitors before granting access.Video door phones are security communication devices that allow residents to see, speak to, and verify visitors before granting access. They feature a camera, microphone, and speaker system, enhancing safety by providing visual and audio monitoring at entry points.",
+     phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "REMOTE GATES",
+    image: "images/remote.jpg",
+    description: "Gates controlled by remote or smart devices.Remote gates are automated gate systems that can be opened or closed using a remote control or smart device. They offer enhanced security and convenience by allowing access control without needing to leave your vehicle or manually operate the gate. Ideal for homes, offices, and commercial spaces.",
+     phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "BOOM BARRIERS",
+    image: "images/boom.jpg",
+    description: "Control vehicle access with horizontal barriers.Boom barriers are horizontal poles that move up and down to control vehicle access at entry and exit points. Commonly used in parking lots, toll plazas, gated communities, and industrial premises, they help manage traffic flow and enhance security by allowing only authorized vehicles to pass.",
+     phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  },
+  {
+    name: "SLIDING ROOF",
+    image: "images/roof.jpg",
+    description: "Motorized or manual sliding roofs for open access.Sliding roofs are movable roofing systems that can be manually or automatically opened and closed to provide ventilation, natural light, or an open-air experience. Commonly used in homes, commercial buildings, greenhouses, and event venues, they offer flexibility in managing environmental conditions and enhance architectural appeal.",
+    phone: "9846317161",
+    email: "novachip2002@gmail.com"
+  }
+];
+
+    const params = new URLSearchParams(window.location.search);
+    const productName = params.get("name");
+    const product = products.find(p => p.name.toLowerCase() === productName?.toLowerCase());
+
+    if (product) {
+      document.getElementById("productName").textContent = product.name;
+      document.getElementById("productImage").src = product.image;
+      document.getElementById("productImage").alt = product.name;
+      document.getElementById("productDescription").textContent = product.description;
+
+      const contactElement = document.getElementById("productContact");
+      let contactHTML = "";
+
+      if (product.phone) {
+        contactHTML += `<p><strong>Phone:</strong> <a href="tel:${product.phone}">${product.phone}</a></p>`;
+      }
+
+      if (product.email) {
+        contactHTML += `<p><strong>Email:</strong> <a href="mailto:${product.email}">${product.email}</a></p>`;
+      }
+
+      contactElement.innerHTML = contactHTML || "No contact info available.";
+    } else {
+      document.getElementById("productName").textContent = "Product Not Found";
+      document.getElementById("productDescription").textContent = "Sorry, the product you're looking for does not exist.";
+    }
+  </script>
+  <footer>
+    <p>&copy; 2025 NOVACHIP</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVACHIP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    header {
+    background: #03045e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #003049;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .scroll-bar {
+      overflow: hidden;
+      width: 100%;
+      background: #f8f8f8;
+      padding: 10px 0;
+    }
+
+    .scroll-track {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      animation: scroll-left 60s linear infinite;
+      width: max-content;
+      align-items: center;
+    }
+
+    .product-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 30px;
+      flex-shrink: 0;
+      text-align: center;
+    }
+
+    .product-item img {
+      height: 80px;
+      width: auto;
+      display: block;
+    }
+
+    .product-item span {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #000;
+      white-space: nowrap;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .blue-box {
+      background: linear-gradient(135deg, #3a0ca3, #5f4bff, #007BFF);
+      color: white;
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      box-sizing: border-box;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blue-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .brand-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .brand-logos img {
+      max-width: 120px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    footer {
+      text-align: center;
+      background: #03045e;
+      color: white;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NOVACHIP</h1>
+    <p>STREAMLINING YOUR OFFICE PROCESSES</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="products.html">Products</a>
+  </nav>
+
+  <!-- ✅ Horizontal Scrolling Section -->
+  <div class="scroll-bar">
+    <div class="scroll-track" id="scrollContent">
+      <!-- JavaScript will inject product items here -->
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="blue-box">
+      <h2>Welcome to Novachip!</h2>
+      <p>
+        Experts in office and home automation, we at NOVACHIP specialize in providing reliable sales and service of smart automation solutions that keep your office and home operations running smoothly.
+      </p>
+      <p>
+        Whether you're upgrading your office systems or you need to automate your home, we offer dependable support within your reach. We believe in mutual growth by offering matchless support to our end users.
+      </p>
+    </div>
+
+    <h3>Some of the renowned brands we deal with:</h3>
+    <div class="brand-logos">
+      <img src="images/sharp.png" alt="SHARP" />
+      <img src="images/panasonic.jpg" alt="PANASONIC" />
+      <img src="images/hp.png" alt="HP" />
+      <img src="images/epson.jpg" alt="EPSON" />
+      <img src="images/foxtech.jpg" alt="FOXTECH" />
+      <img src="images/hikvision.png" alt="HIKVISION" />
+      <img src="images/essl.png" alt="ESSL" />
+      <img src="images/godrej.png" alt="GODREJ" />
+      <img src="images/matrix.jpg" alt="MATRIX" />
+      <img src="images/syntel.png" alt="SYNTEL" />
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 NOVACHIP</p>
+  </footer>
+
+  <script>
+    const products = [
+      "BIOMETRIC ATTENDANCE SYSTEM", "PHOTOSTAT MACHINES", "PRINTERS", "SECURITY ALARM SYSTEM",
+      "COMPUTERS AND SCANNERS", "BILLING MACHINE/CASH REGISTER", "INTERACTIVE BOARDS", "INVERTERS AND BATTERIES",
+      "UPS", "CASH COUNTING MACHINE", "QUEUE MANAGING SYSTEM", "TOKEN DISPENSER", "EPABX", "IP PBX",
+      "AUTOMATIC PERFUME DISPENSER", "AUTOMATIC BELL SYSTEM", "CCTV", "GSM BASED SWITCH ON/OFF SYSTEMS",
+      "TEMPERATURE AND HUMIDITY SENSORS", "DOOR FRAME METAL DETECTORS", "HAND HELD METAL DETECTORS",
+      "TEA AND COFFEE VENDING MACHINE", "LCD PROJECTORS", "LED DISPLAY", "VIDEO DOOR PHONES", "REMOTE GATES",
+      "BOOM BARRIERS", "SLIDING ROOF"
+    ];
+
+    const productImages = [
+      "images/biometric.png", "images/printer.jpg", "images/printers.jpg", "images/alarm.jpg",
+      "images/computer-scanner.jpg", "images/billing-machine.jpg", "images/raptor.png", "images/inverter.jpg",
+      "images/ups.jpg", "images/cash.jpg", "images/queue.jpg", "images/token.jpg", "images/epbx.jpg",
+      "images/ippbx.png", "images/perfume.jpg", "images/bell.jpeg", "images/cctv.jpg", "images/switch.jpg",
+      "images/temperature.jpg", "images/door.jpg", "images/hand.jpg", "images/tea.jpg", "images/lcd.png",
+      "images/led.jpg", "images/video.jpg", "images/remote.jpg", "images/boom.jpg", "images/roof.jpg"
+    ];
+
+    const scrollBar = document.getElementById('scrollContent');
+    const productItemsHTML = productImages.map((src, index) => {
+      return `
+        <div class="product-item">
+          <img src="${src}" alt="${products[index]}">
+          <span>${products[index]}</span>
+        </div>
+      `;
+    }).join('');
+
+    // Duplicate for seamless scrolling
+    scrollBar.innerHTML = productItemsHTML + productItemsHTML;
+  </script>
+</body>
+</html>

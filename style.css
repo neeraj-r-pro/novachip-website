@@ -1,0 +1,106 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f8f8f8;
+}
+
+header {
+    background: #c90707;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background: #222;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #444;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+}
+
+footer {
+    background: #c90707;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.back-button {
+    position: fixed;
+    top: 10px; /* Changed from 20px to 10px */
+    left: 20px;
+    z-index: 1000;
+}
+
+.back-button a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 16px;
+    background-color: #c90707;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+.back-button a:hover {
+    background-color: darkred;
+}
+.search-box button {
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 8px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.search-box button:hover {
+  background-color: #c90707;
+}
+.product-list-wrapper {
+  background-color: #c90707;
+  color: white;
+  padding: 15px;
+  border: 5px solid black;
+  border-radius: 12px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.product-list-wrapper h2 {
+  margin-top: 0;
+}
+
+.horizontal-list span {
+  color: white;
+}
+@media (max-width: 600px) {
+  .product {
+    flex-direction: column;
+    text-align: center;
+  }
+}

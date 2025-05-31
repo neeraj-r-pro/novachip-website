@@ -107,24 +107,46 @@
 }
 
     @media (max-width: 600px) {
-      .product {
-        flex-direction: column;
-        text-align: center;
-      }
+  .product {
+    flex-direction: column;
+    text-align: center;
+  }
 
-      .product img {
-        margin: 0 0 10px 0;
-      }
+  .product a {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
 
-      .horizontal-list {
-        flex-direction: column;
-        align-items: center;
-      }
+  .product-content {
+    order: 2; /* Description below image */
+    padding: 0 10px;
+  }
 
-      .horizontal-list span::after {
-        content: "";
-      }
-    }
+  .product h3 {
+    order: 1; /* Name above image */
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .product img {
+    order: 2;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .horizontal-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .horizontal-list span::after {
+    content: "";
+  }
+}
+
      nav {
     display: flex;
     flex-wrap: wrap;
@@ -220,7 +242,7 @@
     { name: "AUTOMATIC BELL SYSTEM", image: "images/bell.jpeg", description: "Programmable bell ringing device for schools, factories, etc." },
     { name: "CCTV", image: "images/cctv.jpg", description: "Video surveillance system for safety and monitoring" },
     { name: "GSM BASED SWITCH ON/OFF SYSTEMS", image: "images/switch.jpg", description: "Remote device control using GSM" },
-    { name: "TEMPERATURE AND HUMIDITY SENSORS", image: "images/temperature.jpg", description: "Real-time climate monitoring devices" },
+    { name: "TEMPERATURE AND HUMIDITY SENSORS", image: "images/temperature.jpg", description: "Real-time temperature and humidity monitoring devices" },
     { name: "DOOR FRAME METAL DETECTORS", image: "images/door.jpg", description: "Walk-through metal detection security device" },
     { name: "HAND HELD METAL DETECTORS", image: "images/hand.jpg", description: "Portable metal detection for security screening" },
     { name: "TEA AND COFFEE VENDING MACHINE", image: "images/tea.jpg", description: "Automated beverage dispenser for hot drinks" },

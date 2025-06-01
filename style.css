@@ -7,20 +7,28 @@ body {
 header {
     background: #03045e;
     color: white;
-    padding: 20px;
+    padding:40px 20px;
     text-align: center;
 }
 
 nav {
-    background: #222;
-    display: flex;
-    justify-content: center;
+  display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #003049;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
 }
 
 nav a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
+   color: white;
+      margin: 5px 15px;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
 }
 
 nav a:hover {
@@ -115,11 +123,13 @@ footer {
         margin: 0 10px;
     }
 
-    nav a {
-        display: block;
-        margin: 5px 0;
-    }
-
+   nav a {
+    display: inline-block; /* or flex */
+    flex: 0 0 45%; /* Two items per row */
+    text-align: center;
+    margin: 5px;
+    box-sizing: border-box;
+  }
     h1, h3 {
         font-size: 1.5em;
     }

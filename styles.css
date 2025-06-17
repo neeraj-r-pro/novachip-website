@@ -1,0 +1,86 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+.top-bar {
+  background-color:black;
+  color: white;
+  padding: 8px 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.contact-info {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive - Stack phone and email vertically */
+@media (max-width: 600px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .contact-info a {
+    margin: 2px 0;
+  }
+}
+.site-footer {
+  background-color: #222;
+  color: white;
+  padding: 40px 20px 10px;
+  margin-top: 60px;
+}
+
+.site-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  max-width: 300px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+   border-top: 1px solid #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .footer-section {
+    margin-bottom: 5px;
+  }
+}

@@ -1,263 +1,720 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4RGP3G1F5J"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4RGP3G1F5J');
-</script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NOVACHIP</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background-color: #f0f2f5;
-      color: #333;
-    }
-
-    header {
-      background: #03045e;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      background-color: #003049;
-      padding: 10px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav a {
-      color: white;
-      margin: 5px 15px;
-      text-decoration: none;
-      padding: 10px 16px;
-      border-radius: 6px;
-      transition: background 0.3s ease;
-    }
-
-    nav a:hover {
-      background-color: #555;
-    }
-
-  @media (max-width: 600px) {
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  nav a {
-    flex: 0 0 45%;
-    text-align: center;
-    margin: 5px;
-  }
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Showcasing modern office  and home automation products like CCTV, biometric systems, printers, and more. Explore smart solutions for efficient workplaces.">
+    <meta name="keywords" content="office automation,home automation, biometric attendance, CCTV, printers, billing machines">
+    <meta name="author" content="NOVACHIP Pvt. Ltd.">
+    <meta name="robots" content="index, follow">
+    <title>Modern Office And Home Automation Products | Novachip</title>
+    
+    <style>
+.main-header {
+  background-image:url('images/header.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 400px;
+  position: relative;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.5); /* transparent navbar background */
+}
 
-    .scroll-bar {
-      overflow: hidden;
-      width: 100%;
-      background: #fff;
-      padding: 10px 0;
-      border-top: 1px solid #ddd;
-      border-bottom: 1px solid #ddd;
-    }
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  
+}
 
-    .scroll-track {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      animation: scroll-left 60s linear infinite;
-      width: max-content;
-      align-items: center;
-    }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+}
 
-    .product-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0 30px;
-      flex-shrink: 0;
-      text-align: center;
-    }
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
 
-    .product-item img {
-      height: 80px;
-      width: auto;
-      display: block;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-    }
+.nav-links li a:hover {
+  color: #ffd700; /* gold on hover */
+}
 
-    .product-item span {
-      margin-top: 8px;
-      font-size: 14px;
-      color: #000;
-      white-space: nowrap;
-    }
+.header-content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-    @keyframes scroll-left {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
+.header-content h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
 
-    .blue-box {
-      background: linear-gradient(135deg, #3a0ca3, #5f4bff, #007BFF);
-      color: white;
-      border-radius: 15px;
-      padding: 30px;
-      max-width: 900px;
-      margin: 30px auto;
-      text-align: left;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      line-height: 1.6;
-    }
+.header-content p {
+  font-size: 18px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative; /* So dropdown is positioned relative to this */
+  z-index: 10;
+}
 
-    .blue-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+}
 
-    .container {
-      padding: 20px;
-    }
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
 
-    h3 {
-      text-align: center;
-      margin-top: 40px;
-      color: #03045e;
-    }
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
 
-    .brand-logos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin: 30px 0;
-    }
+/* Responsive Dropdown Menu on Top */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 100%;  /* Just below the navbar */
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 100;  /* Make sure it stays on top */
+  }
 
-    .brand-logos img {
-      max-width: 120px;
-      height: auto;
-      object-fit: contain;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+  .nav-links.show {
+    display: flex;
+  }
 
-    .brand-logos img:hover {
-      transform: scale(1.1);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
+  .menu-toggle {
+    display: block;
+  }
+}
+.welcome-section {
+  background-color: #f8f9fa;;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
 
-    footer {
-      text-align: center;
-      background: #03045e;
-      color: white;
-      padding: 20px;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-  </style>
+.welcome-container {
+  display: flex;
+  max-width: 1200px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.welcome-text-box {
+  flex: 1;
+  padding: 40px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.welcome-text-box h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-text-box p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.welcome-image-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+}
+
+.welcome-image-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.welcome-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.welcome-container:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .welcome-container {
+    flex-direction: column;
+  }
+
+  .welcome-image-box {
+    order: -1;
+  }
+
+  .welcome-text-box, .welcome-image-box {
+    padding: 20px;
+  }
+}
+.what-we-provide-section {
+  text-align:left;
+  padding:30px;
+  background-color: #f8f9fa;
+   margin-top: 0;
+}
+
+.floating-title {
+  font-size: 32px;
+  color: #2c3e50;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: float 3s ease-in-out infinite;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.provide-box-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.provide-box {
+  background-color: white;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  animation: float 4s ease-in-out infinite;
+}
+
+.provide-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.provide-box h3 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.provide-box p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Hover Effects */
+.provide-box:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  background-color: #f8fafd;
+}
+
+.provide-box:hover img {
+  transform: scale(1.05);
+}
+
+.provide-box:hover h3 {
+  color: black;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .provide-box-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .provide-box {
+    width: 90%;
+  }
+}
+.brands-section {
+  background-color: #f8f9fa;
+  padding:  20px;
+  text-align: center;
+}
+
+.brands-section .floating-title {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.brands-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.brands-container img {
+  max-width: 120px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.brands-container img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+  opacity: 1;
+}
+ .product-carousel {
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+  }
+
+  .carousel-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    width: max-content;
+  }
+
+  .product-item {
+    flex: 0 0 auto;
+    width: 180px;
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  .product-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Scroll half, since content is duplicated */
+  }
+
+  .product-carousel:hover .carousel-track {
+    animation-play-state: paused;
+  }
+
+.product-item p {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+@keyframes scrollCarousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Optional: make it pause on hover */
+.product-carousel:hover .carousel-track {
+  animation-play-state: paused;
+}
+.product-item {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  width: 150px; /* Optional: control item width */
+}
+
+.product-item p {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #2c3e50; /* Or any color you want */
+}
+
+ </style>
 </head>
 <body>
-  <header>
-    <h1>NOVACHIP</h1>
-    <p>STREAMLINING YOUR OFFICE PROCESSES</p>
-  </header>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-    <a href="products.html">Products</a>
+ <div class="top-bar">
+  <div class="contact-info">
+    <a href="tel:+919876543210">📞 +91 98463 17161</a>
+    <a href="mailto:example@email.com">✉️ novachip2002@gmail.com</a>
+  </div>
+</div>
+<header class="main-header">
+  <nav class="navbar">
+    <div class="logo">NOVACHIP</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </nav>
-
-  <div class="scroll-bar">
-    <div class="scroll-track" id="scrollContent"></div>
+  <div class="header-content">
+    <h1>Welcome to NOVACHIP</h1>
+    <p>Delivering quality products and services</p>
   </div>
+</header>
+ <div class="product-carousel">
+  <div class="carousel-track">
+   <a href="contact.html" class="product-item">
+      <img src="images/cctv.jpg" alt="CCTV">
+      <p>CCTV</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/remote.jpg" alt="Remote Gate">
+      <p>Remote Gate</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/video.jpg" alt="Video Door Phone">
+      <p>Video Door Phone</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/boom.jpg" alt="Boom Barrier">
+      <p>Boom Barrier</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/alarm.webp" alt="Security Alarm System">
+      <p>Security Alarm System</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/roof.jpg" alt="Sliding Roofs">
+      <p>Sliding Roofs</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/autodoor.jfif" alt="Automatic Doors">
+      <p>Automatic Doors</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/solar.jpg" alt="Solar Street Light">
+      <p>Solar Street Light</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/cp.jfif" alt="Computers and Printers">
+      <p>Computers and Printers</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/bio.jfif" alt="Biometric Attendance System">
+      <p>Biometric Attendance System</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/photo.jpg" alt="Photocopiers">
+      <p>Photocopiers</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/cash.jpg" alt="Cash Counting Machine">
+      <p>Cash Counting Machine</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/billing.jpg" alt="Billing Machines / Cash Registers">
+      <p>Billing Machines / Cash Registers</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/led.webp" alt="LED Projectors">
+      <p>LED Projectors</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/queue.jpg" alt="Queue Management System">
+      <p>Queue Management System</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/token.jpg" alt="Token Printer">
+      <p>Token Printer</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/nurse.webp" alt="Wireless Nurses Calling Station">
+      <p>Wireless Nurses Calling Station</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/emergency.jpg" alt="Wireless Emergency Calling System">
+      <p>Wireless Emergency Calling System</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/epbx.jpg" alt="EPABX System">
+      <p>EPABX System</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/ippbx.jpg" alt="IPBX System">
+      <p>IPBX System</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/gsm.png" alt="GSM Based System">
+      <p>GSM Based System</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/timer.webp" alt="Timer Based System">
+      <p>Timer Based System</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/display.jpg" alt="LED Display">
+      <p>LED Display</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/tea.webp" alt="Tea & Coffee Vending Machine">
+      <p>Tea & Coffee Vending Machine</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/boards.webp" alt="Interactive Boards">
+      <p>Interactive Boards</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/bell.jpeg" alt="Automatic Bell System">
+      <p>Automatic Bell System</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/shredder.png" alt="Paper Shredder">
+      <p>Paper Shredder</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/door.jfif" alt="Door Frame Metal Detector">
+      <p>Door Frame Metal Detector</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/hand.jpg" alt="Hand Held Metal Detector">
+      <p>Hand Held Metal Detector</p>
+      </a>
+   <a href="contact.html" class="product-item">
+      <img src="images/cctv.jpg" alt="CCTV">
+      <p>CCTV</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/remote.jpg" alt="Remote Gate">
+      <p>Remote Gate</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/video.jpg" alt="Video Door Phone">
+      <p>Video Door Phone</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/boom.jpg" alt="Boom Barrier">
+      <p>Boom Barrier</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/alarm.webp" alt="Security Alarm System">
+      <p>Security Alarm System</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/roof.jpg" alt="Sliding Roofs">
+      <p>Sliding Roofs</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/autodoor.jfif" alt="Automatic Doors">
+      <p>Automatic Doors</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/solar.jpg" alt="Solar Street Light">
+      <p>Solar Street Light</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/cp.jfif" alt="Computers and Printers">
+      <p>Computers and Printers</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/bio.jfif" alt="Biometric Attendance System">
+      <p>Biometric Attendance System</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/photo.jpg" alt="Photocopiers">
+      <p>Photocopiers</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/cash.jpg" alt="Cash Counting Machine">
+      <p>Cash Counting Machine</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/billing.jpg" alt="Billing Machines / Cash Registers">
+      <p>Billing Machines / Cash Registers</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/led.webp" alt="LED Projectors">
+      <p>LED Projectors</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/queue.jpg" alt="Queue Management System">
+      <p>Queue Management System</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/token.jpg" alt="Token Printer">
+      <p>Token Printer</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/nurse.webp" alt="Wireless Nurses Calling Station">
+      <p>Wireless Nurses Calling Station</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/emergency.jpg" alt="Wireless Emergency Calling System">
+      <p>Wireless Emergency Calling System</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/epbx.jpg" alt="EPABX System">
+      <p>EPABX System</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/ippbx.jpg" alt="IPBX System">
+      <p>IPBX System</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/gsm.png" alt="GSM Based System">
+      <p>GSM Based System</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/timer.webp" alt="Timer Based System">
+      <p>Timer Based System</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/display.jpg" alt="LED Display">
+      <p>LED Display</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/tea.webp" alt="Tea & Coffee Vending Machine">
+      <p>Tea & Coffee Vending Machine</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/boards.webp" alt="Interactive Boards">
+      <p>Interactive Boards</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/bell.jpeg" alt="Automatic Bell System">
+      <p>Automatic Bell System</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/shredder.png" alt="Paper Shredder">
+      <p>Paper Shredder</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/door.jfif" alt="Door Frame Metal Detector">
+      <p>Door Frame Metal Detector</p>
+    </a>
+    <a href="contact.html" class="product-item">
+      <img src="images/hand.jpg" alt="Hand Held Metal Detector">
+      <p>Hand Held Metal Detector</p>
+    </a>
+  </div>
+</div>
 
-  <div class="container">
-    <div class="blue-box">
-      <h2>Welcome to Novachip!</h2>
-      <p>
-        Experts in office and home automation, we at NOVACHIP specialize in providing reliable sales and service of smart automation solutions that keep your office and home operations running smoothly.
-      </p>
-      <p>
-        Whether you're upgrading your office systems or you need to automate your home, we offer dependable support within your reach. We believe in mutual growth by offering matchless support to our end users.
+<section class="welcome-section">
+  <div class="welcome-container">
+    <div class="welcome-text-box">
+      <h2 class="floating-text"> NOVACHIP</h2>
+      <p class="floating-subtext">
+       Experts in office and home automation, we at NOVACHIP specialize in providing reliable sales and service of smart automation solutions that keep your office and home operations running smoothly.
+
+Whether you're upgrading your office systems or you need to automate your home, we offer dependable support within your reach. We believe in mutual growth by offering matchless support to our end users.
       </p>
     </div>
-
-    <h3>Some of the renowned brands we deal with:</h3>
-    <div class="brand-logos">
-      <img src="images/panasonic.jpg" alt="PANASONIC" />
-      <img src="images/Sharp.png" alt="SHARP" />
-      <img src="images/hp.png" alt="HP" />
-      <img src="images/foxtech.jpg" alt="FOXTECH" />
-      <img src="images/hikvision.png" alt="HIKVISION" />
-      <img src="images/essl.png" alt="ESSL" />
-      <img src="images/godrej.png" alt="GODREJ" />
-      <img src="images/matrix.jpg" alt="MATRIX" />
-      <img src="images/syntel.png" alt="SYNTEL" />
-      <img src="images/epson.jpg" alt="EPSON" />
+    <div class="welcome-image-box">
+      <img src="images/welcome.webp" alt="Welcome Image">
     </div>
   </div>
 
-  <footer>
-    <p>&copy; 2025 NOVACHIP | Designed with care</p>
-  </footer>
+</section>
+<section class="what-we-provide-section">
+  <h2 class="floating-title">What We Provide:-</h2>
+  <div class="provide-box-container">
+  <a href="home-automation.html" class="provide-box" style="text-decoration: none;">
+  <img src="images/home.jpeg" alt="Service 1">
+  <h3><strong>HOME AUTOMATION</strong></h3>
+  <p>We offer reliable and high-performance products tailored to your needs.</p>
+</a>
 
-  <script>
-    const products = [
-      "BIOMETRIC ATTENDANCE SYSTEM", "PHOTOSTAT MACHINES", "PRINTERS", "SECURITY ALARM SYSTEM",
-      "COMPUTERS AND SCANNERS", "BILLING MACHINE/CASH REGISTER", "INTERACTIVE BOARDS", "INVERTERS AND BATTERIES",
-      "UPS", "CASH COUNTING MACHINE", "QUEUE MANAGING SYSTEM", "TOKEN DISPENSER", "EPABX", "IP PBX",
-      "AUTOMATIC PERFUME DISPENSER", "AUTOMATIC BELL SYSTEM", "CCTV", "GSM BASED SWITCH ON/OFF SYSTEMS",
-      "TEMPERATURE AND HUMIDITY SENSORS", "DOOR FRAME METAL DETECTORS", "HAND HELD METAL DETECTORS",
-      "TEA AND COFFEE VENDING MACHINE", "LCD PROJECTORS", "LED DISPLAY", "VIDEO DOOR PHONES", "REMOTE GATES",
-      "BOOM BARRIERS", "SLIDING ROOF"
-    ];
+<a href="office-automation.html" class="provide-box" style="text-decoration: none;">
+  <img src="images/office.jpg" alt="Service 2">
+  <h3><strong>OFFICE AUTOMATION</strong></h3>
+  <p>Our team provides expert services to help you succeed efficiently.</p>
+</a>
 
-    const productImages = [
-      "images/biometric.png", "images/printer.jpg", "images/printers.jpg", "images/alarm.jpg",
-      "images/computer-scanner.jpg", "images/billing-machine.jpg", "images/raptor.png", "images/inverter.jpg",
-      "images/ups.jpg", "images/cash.jpg", "images/queue.jpg", "images/token.jpg", "images/epbx.jpg",
-      "images/ippbx.png", "images/perfume.jpg", "images/bell.jpeg", "images/cctv.jpg", "images/switch.jpg",
-      "images/temperature.jpg", "images/door.jpg", "images/hand.jpg", "images/tea.jpg", "images/lcd.png",
-      "images/led.jpg", "images/video.jpg", "images/remote.jpg", "images/boom.jpg", "images/roof.jpg"
-    ];
+</section>
+<section class="brands-section">
+  <h2 class="floating-title">Some Brands We Work With</h2>
+  <div class="brands-container">
+    <img src="images/panasonic.jpg" alt="panasonic">
+    <img src="images/sharp.png" alt="SHARP" />
+    <img src="images/hp.png" alt="hp">
+    <img src="images/foxtech.jpg" alt="FOXTECH" />
+    <img src="images/hikvision.png" alt="HIKVISION" />
+    <img src="images/essl.png" alt="ESSL" />
+    <img src="images/godrej.png" alt="GODREJ" />
+    <img src="images/matrix.jpg" alt="MATRIX" />
+    <img src="images/syntel.png" alt="SYNTEL" />
+    <img src="images/epson.jpg" alt="EPSON" />
+  </div>
+</section>
 
-    const scrollBar = document.getElementById('scrollContent');
-    const productItemsHTML = productImages.map((src, index) => {
-      return `
-        <div class="product-item">
-          <img src="${src}" alt="${products[index]}">
-          <span>${products[index]}</span>
-        </div>
-      `;
-    }).join('');
-
-    scrollBar.innerHTML = productItemsHTML + productItemsHTML;
-  </script>
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('show');
+  }
+</script>
 </body>
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <p>Email: <a href="novachip2002@gmail.com">novachip2002@gmail.com</a></p>
+      <p>Phone: <a href="tel:+91 9846317161">+91 9846317161</a></p>
+    </div>
+    <div class="footer-section">
+      <h4>Address</h4>
+       <p>Novachip,1st Floor, Maliyekkal Building,<br>
+        Kalmandapam, Palakkad-678001<br>
+        Kerala, India</p>
+    </div>
+  </div>
+   <div class="footer-bottom">
+    <p>&copy; 2025 NOVACHIP Pvt. Ltd. All rights reserved.</p>
+  </div>
+</footer>
 </html>
+
+

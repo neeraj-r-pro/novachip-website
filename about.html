@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Showcasing modern office  and home automation products like CCTV, biometric systems, printers, and more. Explore smart solutions for efficient workplaces.">
+  <meta name="keywords" content="office automation,home automation, biometric attendance, CCTV, printers, billing machines">
+  <meta name="author" content="NOVACHIP Pvt. Ltd.">
+  <meta name="robots" content="index, follow">
+ <title>Modern Office And Home Automation Products | Novachip</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .top-bar {
+      background-color: #000;
+      color: white;
+      padding: 10px 20px;
+      text-align: right;
+    }
+
+    .top-bar a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+
+    .main-header {
+      background-image: url('images/services.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 400px;
+      padding-bottom: 100px;
+      position: relative;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #ffd700;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        border-radius: 4px;
+        z-index: 100;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    .header-content {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .header-content h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .header-content p {
+      font-size: 18px;
+    }
+
+    .contact-boxes {
+      padding: 60px 20px;
+      background-color: white;
+    }
+
+    .floating-group {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 30px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: breathe 4s ease-in-out infinite;
+}
+
+
+    .floating-group:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    @keyframes breathe {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-4px);
+      }
+    }
+
+    .box-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 0 10px;
+    }
+
+    .box {
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: black;
+      transform: translateY(-4px);
+    }
+
+    .box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .box h3 {
+      margin: 15px 0 10px;
+      font-size: 22px;
+    }
+
+    .box p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .box-icon {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      background-color: white;
+      border-radius: 12px;
+      padding: 8px;
+      margin: 0 auto 10px auto;
+    }
+
+    .side-image {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (min-width: 769px) {
+      .row {
+        flex-direction: row;
+      }
+
+      .row-reverse {
+        flex-direction: row-reverse;
+      }
+
+      .box-wrapper.row,
+      .box-wrapper.row-reverse {
+        align-items: center;
+        justify-content: center;
+      }
+
+      .box,
+      .side-image {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .box-wrapper {
+        flex-direction: column;
+      }
+
+      .box,
+      .side-image {
+        width: 90%;
+        height: auto;
+      }
+    }
+    .box iframe {
+  width: 100%;
+  height: 200px;
+  border: 0;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+.box a {
+  color:black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.box a:hover {
+  text-decoration: underline;
+  color: red; /* Optional: golden yellow on hover */
+}
+
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="contact-info">
+      <a href="tel:+919846317161">📞 +91 98463 17161</a>
+      <a href="mailto:novachip2002@gmail.com">✉️ novachip2002@gmail.com</a>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="logo">NOVACHIP</div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-content">
+      <h1>About Us</h1>
+      <p>Understand More About Us</p>
+    </div>
+  </header>
+
+  <section class="contact-boxes">
+    <!-- Image on Right -->
+    <div class="floating-group">
+      <div class="box-wrapper row-reverse">
+        <img src="images/missionai.png" alt="Office Building" class="side-image">
+        <div class="box">
+          <img src="images/miscon.png" alt="Address Icon" class="box-icon">
+          <h3>Our Mission</h3>
+          <p><strong>To provide reliable, efficient, and affordable office and home automation solutions that empower businesses and individuals to thrive in a connected world.</strong></p>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Image on Left -->
+    <div class="floating-group">
+      <div class="box-wrapper row">
+        <img src="images/vissionai.jpeg" alt="Support" class="side-image">
+        <div class="box">
+          <img src="images/viscon.png" alt="Contact Icon" class="box-icon">
+          <h3>Our Vision</h3>
+         <p><strong>To become a leading service provider in the automation industry by delivering innovative solutions and unmatched customer support.</strong></p>
+        </div>
+      </div>
+    </div>
+    <!-- Image on Right -->
+    <div class="floating-group">
+      <div class="box-wrapper row-reverse">
+        <img src="images/visionai.png" alt="Office Building" class="side-image">
+        <div class="box">
+          <img src="images/joucon.png" alt="Address Icon" class="box-icon">
+          <h3>Our Journey</h3>
+         <p><strong>Started in 2002 with a passion for simplifying office processes, Novachip has grown from a small service center to a trusted automation solutions provider serving over 1500 satisfied clients.</strong></p>
+        </div> 
+      </div>
+    </div>
+     <!-- Image on Left -->
+    <div class="floating-group">
+      <div class="box-wrapper row">
+        <img src="images/teamai.png" alt="Support" class="side-image">
+        <div class="box">
+          <img src="images/teacon.png" alt="Contact Icon" class="box-icon">
+          <h3>Our Team</h3>
+        <p><strong>Our team consists of experienced professionals with deep knowledge in office and home equipment, automation systems, and customer service. Their dedication ensures fast and efficient support to all our clients.</strong></p>
+        </div>
+      </div>
+    </div>
+    <!-- Image on Right -->
+    <div class="floating-group">
+      <div class="box-wrapper row-reverse">
+        <img src="images/valueai.png" alt="Office Building" class="side-image">
+        <div class="box">
+          <img src="images/vacon.png" alt="Address Icon" class="box-icon">
+         <h3>Our Values</h3>
+      <ul class="about-list"><strong>
+        <li>Customer-Centric Approach</li>
+        <li>Integrity and Transparency</li>
+        <li>Innovation and Adaptability</li>
+        <li>Commitment to Quality</li>
+        <li>Ensure customer satisfaction</li></strong>
+      </ul>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>Email: <a href="mailto:novachip2002@gmail.com">novachip2002@gmail.com</a></p>
+        <p>Phone: <a href="tel:+919846317161">+91 9846317161</a></p>
+      </div>
+      <div class="footer-section">
+        <h4>Address</h4>
+         <p>Novachip,1st Floor, Maliyekkal Building,<br>
+        Kalmandapam, Palakkad-678001<br>
+        Kerala, India</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 NovaChip Pvt. Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

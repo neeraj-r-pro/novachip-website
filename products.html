@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modern Office And Home Automation Products | Novachip</title>
+  <meta name="description" content="Showcasing modern office  and home automation products like CCTV, biometric systems, printers, and more. Explore smart solutions for efficient workplaces.">
+  <meta name="keywords" content="office automation,home automation, biometric attendance, CCTV, printers, billing machines">
+  <meta name="author" content="NOVACHIP Pvt. Ltd.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="styles.css"> <!-- Optional -->
+  <style>
+  .product-header {
+  background-image: url('images/products.png');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  position: relative;
+  color: white;
+padding-bottom: 100px; /* <--- add this */
+}
+
+.floating-box {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 30px; /* Changed from -100px to 30px */
+  z-index: 10;
+}
+
+    /* Navbar styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #ffd700;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Header text */
+    .header-content {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .header-content h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .header-content p {
+      font-size: 18px;
+    }
+
+    .content {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        padding: 10px;
+        border-radius: 4px;
+        z-index: 100;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+ .product-description-box {
+  background: #ffffff;
+  margin: 60px auto 40px auto; /* pushed below header */
+  max-width: 800px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.product-description-box:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.product-description-box h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.product-description-box p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+.floating-box {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top:100px;
+  z-index: 10;
+}
+
+.floating-content {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  color: #444; /* default text color */
+}
+
+.floating-content:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  color: #000; /* text color on hover */
+}
+
+.floating-content:hover h2,
+.floating-content:hover p {
+  color: #000;
+}
+
+.product-features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 0px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.feature-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.feature-box img {
+  width: 100%;
+  border-radius: 12px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.feature-box:hover h3,
+.feature-box:hover p {
+  color: #000000;
+}
+.feature-box-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.feature-box-link:hover h3,
+.feature-box-link:hover p {
+  color: black; /* Hover effect for text */
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="contact-info">
+      <a href="tel:+919846317161">📞 +91 98463 17161</a>
+      <a href="mailto:novachip2002@gmail.com">✉️ novachip2002@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- Header with navbar -->
+  <header class="main-header product-header">
+    <nav class="navbar">
+      <div class="logo">NOVACHIP</div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-content">
+      <h1>Our Products</h1>
+      <p>Explore our range of smart solutions</p>
+    </div>
+  </header>
+<section class="floating-box">
+  <div class="floating-content">
+    <h2>About Our Products</h2>
+    <p>
+      At NOVACHIP, we use high-quality products from trusted brands. 
+      Our team specializes in professional installation and comprehensive service 
+      to ensure reliable and efficient performance tailored to your needs.
+    </p>
+  </div>
+</section>
+<section class="product-features">
+  <a href="home-automation.html" class="feature-box-link">
+    <div class="feature-box">
+      <img src="images/home.jpeg" alt="Home Automation">
+      <h3><strong>HOME AUTOMATION</strong></h3>
+      <p><strong>WANT TO UPGRADE YOUR HOUSE? CLICK TO SEE THE VAST VARIETY OF PRODUCTS WE PROVIDE</strong></p>
+    </div>
+  </a>
+
+  <a href="office-automation.html" class="feature-box-link">
+    <div class="feature-box">
+      <img src="images/office.jpg" alt="Office Automation">
+      <h3><strong>OFFICE AUTOMATION</strong></h3>
+      <p><strong>WANT TO UPGRADE YOUR OFFICE? CLICK TO SEE THE VAST VARIETY OF PRODUCTS WE PROVIDE</strong></p>
+    </div>
+  </a>
+</section>
+
+ <!-- Mobile toggle script -->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+</body>
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <p>Email: <a href="mailto:novachip2002@gmail.com">novachip2002@gmail.com</a></p>
+      <p>Phone: <a href="tel:+919846317161">+91 9846317161</a></p>
+    </div>
+    <div class="footer-section">
+      <h4>Address</h4>
+      <p>Novachip,1st Floor, Maliyekkal Building,<br>
+        Kalmandapam, Palakkad-678001<br>
+        Kerala, India</p>
+    </div>
+  </div>
+   <div class="footer-bottom">
+    <p>&copy; 2025 NovaChip Pvt. Ltd. All rights reserved.</p>
+  </div>
+</footer>
+</html>
